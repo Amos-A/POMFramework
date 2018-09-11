@@ -14,6 +14,7 @@ namespace BDD_Specflow_Webdriver.framework
     {
         public static UserData GetUserType(String userType)
         {
+
             var userExcel = new ExcelMapper("Data.xls").Fetch<UserData>("UserData");
             var userExcelData = userExcel.GetEnumerator();
             while (userExcelData.MoveNext())
